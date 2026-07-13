@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #e2e2e2;
+  --color-foreground: #000000;
+  --color-muted: #666666;
+  --color-border: #c8c8c8;
+  --font-sans: var(--font-instrument-sans);
+  --font-heading: var(--font-damase);
+  --font-mono: var(--font-space-mono);
+}
+
+:root {
+  --header-height: 5rem;
+}
+
+html.custom-cursor-active,
+html.custom-cursor-active body,
+html.custom-cursor-active a,
+html.custom-cursor-active button,
+html.custom-cursor-active [role="button"],
+html.custom-cursor-active input,
+html.custom-cursor-active select,
+html.custom-cursor-active textarea,
+html.custom-cursor-active summary,
+html.custom-cursor-active label[for] {
+  cursor: none;
+}
+
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: var(--header-height);
+  background-color: #e2e2e2;
+}
+
+body,
+a,
+button,
+[role="button"] {
+  cursor: crosshair;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-cursor-blink {
+    animation-duration: 1.1s !important;
+    animation-iteration-count: infinite !important;
+  }
+}
+
+body {
+  background-color: #e2e2e2;
+  color: var(--color-foreground);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), Georgia, "Times New Roman", serif;
+}
+
+::selection {
+  background: var(--color-foreground);
+  color: var(--color-background);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cursor-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-cursor-blink {
+  animation: cursor-blink 1.1s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out forwards;
+}
+
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
