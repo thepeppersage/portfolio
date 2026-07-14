@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 import { Instrument_Sans, Space_Mono } from "next/font/google";
 
 export const damase = localFont({
-  src: "../public/Fonts/damase-v2.ttf",
+  src: "../public/fonts/damase-v2.ttf",
   variable: "--font-damase",
   display: "swap",
   weight: "400",
