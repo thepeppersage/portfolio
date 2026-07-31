@@ -167,7 +167,7 @@ export function CustomCursor() {
     window.addEventListener("resize", onScrollOrResize);
     document.documentElement.addEventListener("mouseleave", onLeave);
 
-    // Initial color for dark pages (slug routes) before first mouse move.
+    // Initial color before first mouse move (incl. slug routes).
     applyColor(
       pointerRef.current.x || window.innerWidth / 2,
       pointerRef.current.y || window.innerHeight / 2,

@@ -11,7 +11,8 @@ import {
 import { HeaderLogo } from "./HeaderLogo";
 
 const FALLBACK_SURFACE = "#e2e2e2";
-const PROJECT_DARK_SURFACE = "rgb(20, 20, 20)";
+const PROJECT_SURFACE = "#e2e2e2";
+const DARK_SURFACE = "rgb(20, 20, 20)";
 
 type Rgba = { r: number; g: number; b: number; a: number };
 
@@ -94,7 +95,7 @@ function sampleColorAt(x: number, y: number): string {
 
     const darkPage = el.closest<HTMLElement>('[data-cursor-surface="dark"]');
     if (darkPage) {
-      return colorFromNode(darkPage) ?? PROJECT_DARK_SURFACE;
+      return colorFromNode(darkPage) ?? DARK_SURFACE;
     }
 
     const stretch = el.closest<HTMLElement>("[data-stretch-band]");
@@ -122,8 +123,8 @@ function initialFillForPath(pathname: string): HeaderFill {
   if (pathname.startsWith("/work")) {
     return {
       mode: "solid",
-      color: PROJECT_DARK_SURFACE,
-      dark: true,
+      color: PROJECT_SURFACE,
+      dark: false,
     };
   }
   return {
@@ -192,7 +193,7 @@ function sampleHeaderFill(pathname: string): HeaderFill {
 export function Header() {
   const pathname = usePathname();
   const router = useRouter();
-  // null = use route-based fill so /work/* never paints light on first frame
+  // null = use route-based fill so /work/* matches project surface on first frame
   const [fillOverride, setFillOverride] = useState<HeaderFill | null>(null);
   const fill = fillOverride ?? initialFillForPath(pathname);
 
@@ -205,7 +206,7 @@ export function Header() {
   };
 
   useEffect(() => {
-    // Reset override on route change so project pages stay dark from path.
+    // Reset override on route change so project pages use their path fill.
     setFillOverride(null);
 
     let raf = 0;
