@@ -47,6 +47,10 @@ export const projects = [
       "Reporting tools that help restaurant operators understand sales, labor, and trends without drowning in spreadsheets.",
     images: [
       {
+        src: "/assets/live-sales/RedesignLS.png",
+        alt: "Live Sales redesign",
+      },
+      {
         src: "/assets/live-sales/Live-Sales-Desktop.png",
         alt: "Live Sales reporting",
       },
