@@ -31,7 +31,7 @@ export const projects = [
       "KDS is kitchen-facing software that is the heart of restaurant operations, but not a well-known product in Square's massive ecosystem",
     overview: {
       headline:
-        "I redesigned the KDS, refreshing the system's visuals, re-organizing content & navigation, and simplifying device management.",
+        "I redesigned the KDS experience to create a clearer, more cohesive system—restructuring content and navigation, simplifying device management and settings, and refreshing the visual language.",
       goalsLabel: "Redesign Goals",
       goals: [
         "Modernize the KDS with a cleaner visual design and more scalable design system.",
