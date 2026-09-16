@@ -23,6 +23,7 @@ export const projects = [
       "Order routing and prep workflows for back-of-house teams — clearer ticket states, faster handoffs, and less noise on the line.",
     images: [
       { src: "/assets/kds/kds-vision.png", alt: "KDS vision" },
+      { src: "/assets/kds/Redesign.png", alt: "KDS redesign" },
       { src: "/assets/kds/Foundation.png", alt: "KDS foundation" },
       { src: "/assets/kds/Chits.png", alt: "KDS chits" },
     ],
@@ -47,7 +48,7 @@ export const projects = [
       "Reporting tools that help restaurant operators understand sales, labor, and trends without drowning in spreadsheets.",
     images: [
       {
-        src: "/assets/live-sales/RedesignLS.png",
+        src: "/assets/live-sales/Lives-sales-new.png",
         alt: "Live Sales redesign",
       },
       {
@@ -57,7 +58,7 @@ export const projects = [
     ],
     overview: {
       headline:
-        "I designed reporting tools that help restaurants & cafes understand and improve day-to-day operations using sales, labor, cash, and operations data across Square's ecosystem",
+        "I designed reporting tools across Square's ecosystem on Dashboard, POS, and mobile that helped restaurants understand and improve their daily operations",
       goalsLabel: "Context",
       goals: [
         "For restaurant operations, no timeline is as important as Today",
