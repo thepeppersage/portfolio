@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { projects } from "@/lib/data";
+import { projects, site } from "@/lib/data";
 import {
   SECTION_BG_BLACK,
   SECTION_BG_CLASS,
@@ -63,12 +63,21 @@ export function Work() {
           >
             Sample work from Square
           </p>
+          <p
+            className={
+              debug
+                ? "mt-3 max-w-3xl font-sans text-sm leading-[1.65] text-[#141414]/50"
+                : "mt-3 max-w-3xl font-sans text-sm leading-[1.65] text-[#888888]"
+            }
+          >
+            {site.workIntro}
+          </p>
 
           <div
             className={
               debug
-                ? "mt-4 grid grid-cols-1 divide-y divide-[#141414]/20 border border-[#141414]/20 lg:grid-cols-3 lg:divide-x"
-                : "mt-4 grid grid-cols-1 divide-y divide-[#f5f0e8]/20 border border-[#f5f0e8]/20 lg:grid-cols-3 lg:divide-x"
+                ? "mt-6 grid grid-cols-1 divide-y divide-[#141414]/20 border border-[#141414]/20 lg:grid-cols-3 lg:divide-x"
+                : "mt-6 grid grid-cols-1 divide-y divide-[#f5f0e8]/20 border border-[#f5f0e8]/20 lg:grid-cols-3 lg:divide-x"
             }
           >
             {projects.map((project, i) => (
