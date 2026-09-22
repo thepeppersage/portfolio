@@ -82,6 +82,24 @@ export const projects = [
       ],
     },
   },
+  {
+    slug: "order-routing",
+    title: "Order routing",
+    category: "Square • 2025-2026",
+    description:
+      "Getting tickets to the right station at the right time — cleaner handoffs for the line, expo, and fulfillment.",
+    images: [
+      { src: "/assets/BoH/BoH.png", alt: "Order routing" },
+    ],
+    overview: {
+      headline:
+        "I designed order routing for back-of-house teams, so tickets land on the right station without extra noise on the line.",
+      goalsLabel: "Context",
+      goals: [
+        "Restaurants need orders to reach the right kitchen station at the right moment—without extra chatter, reprints, or missed handoffs.",
+      ],
+    },
+  },
 ];
 
 export type Project = (typeof projects)[number] & {

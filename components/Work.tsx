@@ -76,15 +76,15 @@ export function Work() {
           <div
             className={
               debug
-                ? "mt-6 grid grid-cols-1 divide-y divide-[#141414]/20 border border-[#141414]/20 lg:grid-cols-3 lg:divide-x"
-                : "mt-6 grid grid-cols-1 divide-y divide-[#f5f0e8]/20 border border-[#f5f0e8]/20 lg:grid-cols-3 lg:divide-x"
+                ? "mt-6 grid grid-cols-1 divide-y divide-[#141414]/20 border border-[#141414]/20 lg:grid-cols-2 lg:divide-x"
+                : "mt-6 grid grid-cols-1 divide-y divide-[#f5f0e8]/20 border border-[#f5f0e8]/20 lg:grid-cols-2 lg:divide-x"
             }
           >
             {projects.map((project, i) => (
               <Link
                 key={project.slug}
                 href={`/work/${project.slug}`}
-                className="group flex h-auto min-w-0 flex-col overflow-hidden rounded-[1px] p-6 outline outline-1 outline-transparent transition-[outline-color] duration-300 hover:outline-[#f5ecc0] md:p-8 lg:h-[38rem] lg:p-10"
+                className="group flex h-auto min-w-0 flex-col overflow-hidden rounded-[1px] p-6 outline outline-1 outline-transparent transition-[outline-color] duration-300 hover:outline-[#f5ecc0] md:p-8 lg:min-h-[28rem] lg:p-10"
               >
                 <span
                   className={
