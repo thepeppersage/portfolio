@@ -57,8 +57,8 @@ export function Work() {
           <p
             className={
               debug
-                ? "font-sans text-sm font-medium leading-relaxed text-[#141414]"
-                : "font-sans text-sm font-medium leading-relaxed text-white"
+                ? "font-sans text-[clamp(1.25rem,2.2vw,1.75rem)] font-medium leading-relaxed text-[#141414]"
+                : "font-sans text-[clamp(1.25rem,2.2vw,1.75rem)] font-medium leading-relaxed text-white"
             }
           >
             Sample work from Square

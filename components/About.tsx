@@ -237,7 +237,7 @@ export function About() {
               : SECTION_INNER_CLASS
           }
         >
-          <div className="flex min-w-0 w-full max-w-full flex-col gap-5">
+          <div className="flex min-w-0 w-full max-w-full flex-col gap-12">
               <AboutTitleReveal />
               <FadeIn className="min-w-0 w-full max-w-[70%]" delay={200}>
                 <p className="max-w-full font-mono text-[clamp(0.9375rem,1.85vw,1.125rem)] tracking-wider text-muted break-words">
