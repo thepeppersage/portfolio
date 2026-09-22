@@ -40,7 +40,7 @@ export const projects = [
   },
   {
     slug: "kitchen-display-systems",
-    title: "Kitchen Display System",
+    title: "Kitchen Display Systems redesign",
     category: "Square • 2025-2026",
     description:
       "Order routing and prep workflows for back-of-house teams — clearer ticket states, faster handoffs, and less noise on the line.",
