@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { site } from "@/lib/data";
 
 export function Footer() {
@@ -5,7 +6,14 @@ export function Footer() {
     <footer className="bg-background px-9 py-10 lg:px-6">
       <div className="mx-auto w-full max-w-7xl">
         <p className="font-mono text-xs uppercase tracking-wider text-muted">
-          ( {site.credit} )
+          ({" "}
+          <Link
+            href="/analytics"
+            className="link-underline hover:text-foreground"
+          >
+            {site.credit}
+          </Link>{" "}
+          )
         </p>
       </div>
     </footer>
