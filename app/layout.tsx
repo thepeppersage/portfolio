@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { damase, instrumentSans, spaceMono } from "@/app/fonts";
 import { CustomCursor } from "@/components/CustomCursor";
 import { Header } from "@/components/Header";
@@ -24,6 +25,7 @@ export default function RootLayout({
         <CustomCursor />
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );
