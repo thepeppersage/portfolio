@@ -12,7 +12,7 @@ import { FadeIn } from "./FadeIn";
 import { DebugLabel, useParallaxDebug } from "./ParallaxDebug";
 
 const ABOUT_TITLE =
-  "Product designer with 13+ years of experience simplifying complex ecosystems for diverse audiences and emerging technology";
+  "Product designer with 13+ years of experience designing for complex ecosystems, diverse audiences, and emerging technology";
 
 const TITLE_PARTS = ABOUT_TITLE.split(/(\s+)/);
 
